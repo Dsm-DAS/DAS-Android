@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Signup"
+            type="ui.activity.LoginActivity" />
+        <variable
+            name="Signin"
+            type="ui.activity.LoginActivity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="102dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/suit"
+        android:gravity="center"
+        android:text="로그인"
+        android:textColor="#80000000"
+        android:textFontWeight="700"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/img_loginlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_login_id"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="322dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_id"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+        android:id="@+id/login_button"
+        style="@style/Widget.Main.Button"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FD3078"
+        android:text="로그인"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/et_login_password"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="73dp" />
+
+    <Button
+        android:id="@+id/signup_button"
+        style="@style/Widget.Main.Button"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#E6E6E6"
+        android:text="가입"
+        android:textColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
