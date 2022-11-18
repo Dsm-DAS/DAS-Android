@@ -1,12 +1,22 @@
 package ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.widget.Button
+import base.BaseActivity
 import com.example.das_android.R
+import com.example.das_android.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+class LoginActivity :BaseActivity<ActivityLoginBinding>(R.layout.activity_login){
+    override fun initView() {
+        TODO("Not yet implemented")
     }
+
+    override fun observeEvent() {
+        TODO("Not yet implemented")
+    }
+
 }
+
+
+
+
+
