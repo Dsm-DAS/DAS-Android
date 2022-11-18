@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Widget.Main.Button" parent="Base.CardView" tools:ignore="ResourceCycle">
-        <item name="android:layout_width">322dp</item>
+        <item name="android:layout_width">356dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">745dp</item>
+        <item name="android:fontFamily">"@font/main_font"</item>
+        <item name="fontWeight">700</item>
         <item name="layout_constraintRight_toRightOf">parent</item>
         <item name="layout_constraintLeft_toLeftOf">parent</item>
     </style>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/main_font"
+            android:text="가입"
+            android:textAlignment="center"
+            android:textFontWeight="700"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_register_authenticaion_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/main_font"
+            android:text="인증 번호"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_register_email_number"
+            android:layout_width="380dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/main_font"
+            android:text="입력한 이메일로 전송된 6자리 인증 번호를 \n입력해 주세요"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_authenticaion_number" />
+
+        <TextView
+            android:id="@+id/tv_register_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:text="인증 번호"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_email_number" />
+
+        <EditText
+            android:id="@+id/et_register_email_number"
+            style="@style/Widget.Main.Edit"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:hint="05:00"
+            android:textColorHint="#FD3078"
+            android:gravity="end"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_email2"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/img_email_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_register_email_number"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_register_next"
+            style="@style/Widget.Main.Button"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/main_btn_color"
+            android:text="인증"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
