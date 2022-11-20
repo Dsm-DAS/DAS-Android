@@ -1,4 +1,4 @@
-package ui.activity
+package ui.activity.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
