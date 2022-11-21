@@ -1,4 +1,4 @@
-package ui.activity
+package ui.activity.auth
 
 import base.BaseActivity
 import com.example.das_android.R
@@ -8,12 +8,15 @@ class RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>
     R.layout.activity_register_emailcode
 ){
     override fun initView() {
+        email()
     }
 
     override fun observeEvent() {
 
     }
 
+    private fun email(){
+    }
 
 
 }

@@ -1,4 +1,4 @@
-package ui.activity
+package ui.activity.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
