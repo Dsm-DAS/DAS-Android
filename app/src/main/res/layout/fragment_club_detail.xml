@@ -1,0 +1,116 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.fragment.ClubDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:background="#D2F9EB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,Orientation" />
+
+        <ImageView
+            android:id="@+id/club_image"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/rounded_corner"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/club_name"
+            android:layout_width="184dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="20dp"
+            android:text="멋진로고동아리"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/club_image"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:src="@drawable/img_specialism"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@+id/club_name"
+            app:layout_constraintTop_toBottomOf="@+id/club_image"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/club_specialism"
+            android:layout_width="244dp"
+            android:layout_height="48dp"
+            android:text="#안드로이드 #최악의 분야 #간지"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/club_name"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/club_introduce"
+            android:layout_width="260dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="안드로이드 하지말고 프론트하세요 프론트가 더 좋아요 안드로이드는 사람이 할게 아니에요"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/club_specialism"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="죄회 200"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/club_introduce"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="부원"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
