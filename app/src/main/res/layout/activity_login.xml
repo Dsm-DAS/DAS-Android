@@ -19,16 +19,16 @@
 
         <TextView
         android:id="@+id/textView3"
-        android:layout_width="102dp"
+        android:layout_width="100dp"
         android:layout_height="56dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="110dp"
         android:fontFamily="@font/suit"
         android:gravity="center"
         android:text="로그인"
         android:textColor="#80000000"
         android:textFontWeight="700"
+            android:layout_marginStart="16dp"
         android:textSize="24dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/main_font"
             android:text="이메일"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="50dp"
             android:textFontWeight="700"
             android:textSize="16sp"
@@ -74,7 +74,7 @@
             android:textFontWeight="700"
             android:textSize="16sp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_login_id" />
 
@@ -102,13 +102,12 @@
         <Button
             android:id="@+id/signup_button"
             style="@style/Widget.Main.Button"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="180dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_corner"
             android:backgroundTint="@color/register_color"
             android:text="가입"
             android:textColor="@color/black"
-            app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_button"
             tools:ignore="MissingConstraints"
