@@ -39,7 +39,7 @@
             android:id="@+id/tv_register_dsm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/main_font"
             android:text="dsm.hs.kr 도메인을 사용하세요"
@@ -64,9 +64,11 @@
             android:id="@+id/et_register_email"
             style="@style/Widget.Main.Edit"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/border"
             android:hint="이메일을 입력해주세요"
             android:padding="8dp"
+            android:inputType="textWebEmailAddress"
             app:layout_constraintTop_toBottomOf="@+id/tv_register_email2"
             tools:ignore="MissingConstraints" />
 
@@ -74,10 +76,9 @@
         <Button
             android:id="@+id/btn_register_next"
             style="@style/Widget.Main.Button"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/main_btn_color"
             android:text="다음"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/main_btn_color"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
