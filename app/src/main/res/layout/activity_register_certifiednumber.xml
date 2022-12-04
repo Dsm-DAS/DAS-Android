@@ -11,7 +11,7 @@
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="100dp"
             android:fontFamily="@font/main_font"
             android:text="가입"
@@ -26,7 +26,7 @@
             android:id="@+id/tv_register_authenticaion_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/main_font"
             android:text="인증 번호"
             android:textColor="@color/black"
@@ -41,7 +41,7 @@
             android:id="@+id/tv_register_email_number"
             android:layout_width="380dp"
             android:layout_height="58dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/main_font"
             android:text="입력한 이메일로 전송된 6자리 인증 번호를 \n입력해 주세요"
@@ -67,12 +67,26 @@
             style="@style/Widget.Main.Edit"
             android:layout_marginTop="4dp"
             android:background="@drawable/border"
-            android:hint="05:00"
             android:textColorHint="#FD3078"
-            android:gravity="end"
             android:padding="8dp"
+            android:inputType="number"
             app:layout_constraintTop_toBottomOf="@+id/tv_register_email2"
             tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tv_register_email_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:text="5 : 00"
+            android:textColor="#FD3078"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_register_email_number"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_email2" />
+
 
         <ImageView
             android:id="@+id/logo"
