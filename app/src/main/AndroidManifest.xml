@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,21 +15,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Das_Android"
-        tools:targetApi="31">
-        <activity
-            android:name="ui.activity.LoginActivity"
-            android:exported="true">        </activity>
-        <activity android:name="ui.activity.RegisterAuthenticationNumberAcitivty"
-               android:exported="true">
+        tools:targetApi="s">
+
+        <activity android:name="ui.activity.auth.LoginActivity"
+            android:exported="true">
 
         </activity>
-        <activity android:name="ui.activity.RegisterotherinfomatinoActivity"
-                  android:exported="true">
-
+        <activity android:name="ui.activity.auth.RegisterEmailcodeActivity"
+               android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="ui.activity.auth.RegisterpasswordActivity"
+                  android:exported="true">
+        </activity>
+        <activity android:name="ui.activity.auth.RegisterCertifiedNumberActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name="ui.activity.auth.RegisterotherinformationActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name="ui.activity.MainActivity"
+                    android:exported="true">
+
         </activity>
     </application>
 

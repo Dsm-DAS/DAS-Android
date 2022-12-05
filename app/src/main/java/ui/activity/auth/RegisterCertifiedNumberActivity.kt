@@ -76,6 +76,7 @@ class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednu
         ){
             when(it.code()) {
 
+
                 200 -> {
                     startIntent(this@RegisterCertifiedNumberActivity, RegisterpasswordActivity::class.java)
                     finish()
