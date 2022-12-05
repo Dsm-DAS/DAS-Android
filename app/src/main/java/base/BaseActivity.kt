@@ -6,6 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import ui.activity.auth.RegisterEmailcodeActivity
 
 abstract class BaseActivity<B : ViewDataBinding> (
     @LayoutRes private val layoutId: Int
@@ -35,4 +36,5 @@ abstract class BaseActivity<B : ViewDataBinding> (
     fun showLongToast(msg: String){
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
+
 }

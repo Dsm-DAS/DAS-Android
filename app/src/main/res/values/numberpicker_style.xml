@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="numberpicker" parent="Base.CardView">
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>

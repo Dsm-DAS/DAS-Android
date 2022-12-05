@@ -1,16 +1,13 @@
 package ui.activity.auth
 
-import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityLoginBinding
-import com.example.das_android.databinding.ActivityRegisterEmailcodeBinding
-import data.access_token
 import data.dto.user.login.LoginRequest
 import ui.activity.MainActivity
+import util.access_token
 import util.startIntent
 import util.startIntentClearTop
 import viewmodel.Login.LoginViewModel

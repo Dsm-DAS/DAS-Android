@@ -10,16 +10,27 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class LoginViewModel (
-    private val repository: LoginRepository= LoginRepository()
-):ViewModel(){
-    var success:MutableLiveData<Boolean> = MutableLiveData()
-    var failure:MutableLiveData<Boolean> = MutableLiveData()
+    private val repository: LoginRepository
+):ViewModel() {
 
-    fun postLogin(loginRequest: LoginRequest){
-        Log.d(TAG,"postLogin : " )
-        viewModelScope.launch { kotlin.runCatching {
-            repository.login(loginRequest)
-            }.onSuccess { success }.onFailure { failure }.also { Log.d(TAG,"$success,$failure") }
+
+    val success: MutableLiveData<Boolean> = MutableLiveData()
+    val failure: MutableLiveData<Boolean> = MutableLiveData()
+
+
+
+    fun postLogin(loginRequest: LoginRequest) {
+        Log.d(TAG, "postLogin : ")
+        viewModelScope.launch {
+            kotlin.runCatching {
+                repository.login(loginRequest)
+            }.onSuccess {
+                success
+            }.onFailure {
+                failure
+            }.also {
+                Log.d(TAG, "$success,$failure")
+            }
         }
     }
 }

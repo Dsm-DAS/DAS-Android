@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import base.BaseActivity
+import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityMainBinding
 import ui.fragment.*
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_login){
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        navigationItemSelect()
     }
 
 
@@ -22,9 +22,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_login){
             .commit()
     }
 
-    fun addFragment(fragment: Fragment){
+    fun addFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .add(R.id.frame,fragment)
+            .add(R.id.frame, fragment)
             .addToBackStack(null)
             .commit()
     }
@@ -33,7 +33,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_login){
         binding.bottomNavigationView.run {
             setOnItemSelectedListener { item ->
                 when (item.itemId) {
-                    R.id.home-> replaceFragment(HomeFragment())
+                    R.id.home -> replaceFragment(HomeFragment())
                     R.id.announcement -> replaceFragment(AnnouncementFragment())
                     R.id.detail -> replaceFragment(ClubDetailFragment())
                     R.id.search -> replaceFragment(SearchFragment())
@@ -44,12 +44,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_login){
             selectedItemId = R.id.home
         }
     }
+
     override fun initView() {
-        TODO("Not yet implemented")
+       // TODO("Not yet implemented")
     }
 
     override fun observeEvent() {
-        TODO("Not yet implemented")
+       // TODO("Not yet implemented")
     }
 
 }
