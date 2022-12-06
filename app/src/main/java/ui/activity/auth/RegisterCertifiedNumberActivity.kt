@@ -8,7 +8,7 @@ import com.example.das_android.databinding.ActivityRegisterCertifiednumberBindin
 import data.api.user.register.RegisterRepository
 import util.startIntent
 import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModelFactroy
+import viewmodel.Register.RegisterViewModelFactory
 
 class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednumberBinding>(
     R.layout.activity_register_certifiednumber
@@ -21,7 +21,7 @@ class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednu
 
     private val registerViewModel: RegisterViewModel by lazy {
         ViewModelProvider(
-            this, RegisterViewModelFactroy(registerRepository)
+            this, RegisterViewModelFactory(registerRepository)
         )[RegisterViewModel::class.java]
     }
 
@@ -78,6 +78,7 @@ class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednu
 
 
                 200 -> {
+                    RegisterViewModel.email =   intent.getStringExtra("email")
                     startIntent(this@RegisterCertifiedNumberActivity, RegisterpasswordActivity::class.java)
                     finish()
                 }
