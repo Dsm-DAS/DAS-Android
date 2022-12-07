@@ -54,6 +54,7 @@
             android:background="@drawable/border"
             android:fontFamily="@font/main_font"
             android:padding="8dp"
+            android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@+id/tv_register_email2"
             tools:ignore="MissingConstraints" />
 
@@ -67,8 +68,7 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <TextView
@@ -87,7 +87,8 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/et_register_name"
             app:layout_constraintStart_toStartOf="@+id/et_register_name"
@@ -97,8 +98,8 @@
                 android:id="@+id/np_grade"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:textSize="20sp"
                 android:background="@drawable/grade_piker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_register_class" />
@@ -108,8 +109,8 @@
                 android:id="@+id/np_class"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:textSize="30sp"
                 android:background="@drawable/class_piker"
                 app:layout_constraintStart_toEndOf="@+id/np_class"
                 app:layout_constraintTop_toBottomOf="@+id/tv_register_class" />
@@ -119,8 +120,8 @@
                 style="@style/numberpicker"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:textSize="30sp"
                 android:background="@drawable/number_piker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_register_class" />

@@ -64,11 +64,12 @@
             android:id="@+id/et_register_email"
             style="@style/Widget.Main.Edit"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
             android:background="@drawable/border"
-            android:hint="이메일을 입력해주세요"
-            android:padding="8dp"
             android:inputType="textWebEmailAddress"
+            android:padding="8dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_register_email2"
             tools:ignore="MissingConstraints" />
 
@@ -76,13 +77,12 @@
         <Button
             android:id="@+id/btn_register_next"
             style="@style/Widget.Main.Button"
-            android:text="다음"
             android:backgroundTint="@color/main_btn_color"
+            android:text="다음"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

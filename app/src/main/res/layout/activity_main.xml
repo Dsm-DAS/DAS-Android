@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             app:itemTextColor="#FD3078"
-
+            app:color="@drawable/color"
             android:background="#EEEEEE"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
