@@ -27,6 +27,16 @@ class RegisterViewModel(
     private val _registerResponse = MutableLiveData<Response<Void>>()
     val registerResponse: LiveData<Response<Void>> = _registerResponse
 
+    companion object{
+
+        var email: String? = null
+
+
+
+
+    }
+
+
 
     fun emailcode(
         email: String
@@ -49,15 +59,14 @@ class RegisterViewModel(
     }
 
     fun register(
-        email: String,
         password: String,
         name: String,
         grade: Int,
         class_num: Int,
-        number: String,
+        number: Int,
         sex: String,
     ){
-        val registerRequest = RegisterRequest(email,password, name,grade,class_num,number,sex)
+        val registerRequest = RegisterRequest(email!!,password, name,grade,class_num,number,sex)
         viewModelScope.launch(Dispatchers.IO) {
             _registerResponse.postValue(registerRepository.register(registerRequest))
         }

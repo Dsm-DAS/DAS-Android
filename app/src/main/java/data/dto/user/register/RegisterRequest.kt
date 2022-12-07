@@ -7,6 +7,6 @@ data class RegisterRequest(
     val name: String,
     val grade: Int,
     val class_num: Int,
-    val number: String,
+    val number: Int,
     val sex: String
 )
