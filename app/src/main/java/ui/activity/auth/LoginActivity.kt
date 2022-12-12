@@ -1,62 +1,59 @@
 package ui.activity.auth
 
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityLoginBinding
-import data.dto.user.login.LoginRequest
+import data.api.user.login.LoginRepository
 import ui.activity.MainActivity
-import util.access_token
-import util.startIntent
 import util.startIntentClearTop
 import viewmodel.Login.LoginViewModel
+import viewmodel.Login.LoginViewModelFactory
 
 class LoginActivity :BaseActivity<ActivityLoginBinding>(
     R.layout.activity_login
 ){
-    private val viewModel by lazy {
-        ViewModelProvider(this)[LoginViewModel::class.java]
+
+    private val loginRepository : LoginRepository by lazy {
+        LoginRepository()
     }
 
-
-    private fun initGoRegisterEmail() {
-        binding.signupButton.setOnClickListener {
-            startIntent(this,RegisterEmailcodeActivity::class.java)
-        }
-    }
-
-    private fun initLoginButton() {
-        binding.loginButton.setOnClickListener{
-            val id = binding.etLoginId.text.toString()
-            val password = binding.etLoginPassword.text.toString()
-
-            if (id == "" || password == ""){
-
-            } else {
-                val loginrequest = LoginRequest(id,password)
-                viewModel.postLogin(loginrequest)
-                Toast.makeText(this,"a",Toast.LENGTH_LONG).show()
-            }
-        }
+    private val loginViewModel : LoginViewModel by lazy {
+        ViewModelProvider(this, LoginViewModelFactory(loginRepository))[LoginViewModel::class.java]
     }
 
     override fun initView() {
         initLoginButton()
-        initGoRegisterEmail()
+        initGoRegister()
+    }
+
+    private fun initLoginButton() {
+        binding.loginButton.setOnClickListener {
+            val email = binding.etLoginEmail.text.toString()
+            val passowrd = binding.etLoginPassword.text.toString()
+
+            if (email.isNotBlank() && passowrd.isNotBlank()){
+                loginViewModel.postLogin(email,passowrd)
+            }
+        }
+    }
+
+    private fun initGoRegister() {
+        binding.signupButton.setOnClickListener {
+            startIntentClearTop(this,RegisterEmailcodeActivity::class.java)
+        }
     }
 
     override fun observeEvent() {
-        viewModel.run {
-            success.observe(this@LoginActivity){
-                it.run {
-                    Toast.makeText(baseContext, access_token ,Toast.LENGTH_SHORT).show()
-                    startIntentClearTop(baseContext,MainActivity::class.java)
-                }
-            }
-            failure.observe(this@LoginActivity){
-                it.run {
-                    Toast.makeText(baseContext,"실패",Toast.LENGTH_SHORT).show()
+        loginViewModel.loginResponse.observe(
+            this
+        ){
+            when(it.code()){
+                200 -> {
+                    showShortToast("성공")
+                    startIntentClearTop(this,MainActivity::class.java)
+                } 400->{
+                    showShortToast("이게뭐람;;")
                 }
             }
         }

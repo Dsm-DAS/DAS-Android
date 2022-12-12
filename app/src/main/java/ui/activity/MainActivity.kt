@@ -22,12 +22,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             .commit()
     }
 
-    fun addFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .add(R.id.frame, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
 
     private fun navigationItemSelect() {
         binding.bottomNavigationView.run {
@@ -46,7 +40,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     }
 
     override fun initView() {
-       // TODO("Not yet implemented")
+        navigationItemSelect()
     }
 
     override fun observeEvent() {
