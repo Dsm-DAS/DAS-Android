@@ -6,7 +6,7 @@
     android:layout_height="60dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/user_profile"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@mipmap/ic_launcher"
@@ -19,7 +19,7 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/user_profile"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/student_name" />
 
         <TextView
-            android:id="@+id/count_view"
+            android:id="@+id/student_count_view"
             android:layout_width="28dp"
             android:layout_height="24dp"
             android:text="120"
