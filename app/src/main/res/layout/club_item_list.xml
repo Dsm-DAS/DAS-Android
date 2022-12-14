@@ -31,12 +31,12 @@
                 android:textColor="@color/black"
                 android:textSize="24dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/iv_profile"
+                app:layout_constraintStart_toEndOf="@+id/club_profile"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/iv_profile"
+                android:id="@+id/club_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -52,12 +52,12 @@
                 android:layout_marginTop="24dp"
                 android:id="@+id/hart"
                 android:background="@drawable/img_hart"
-                app:layout_constraintEnd_toStartOf="@+id/count_view"
+                app:layout_constraintEnd_toStartOf="@+id/club_count_view"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/count_view"
+                android:id="@+id/club_count_view"
                 android:layout_width="28dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="24dp"
