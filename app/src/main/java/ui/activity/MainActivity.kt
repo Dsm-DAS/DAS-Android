@@ -1,20 +1,16 @@
 package ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import base.BaseActivity
-import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityMainBinding
 import ui.fragment.*
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
+class MainActivity : BaseActivity<ActivityMainBinding>(
+    R.layout.activity_main
+) {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()

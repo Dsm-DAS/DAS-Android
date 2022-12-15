@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.das_android"
-        minSdk 30
+        minSdk 29
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -48,6 +48,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     def lifecycle_version = "2.5.1"
     def arch_version = "2.5.1"
+
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+
 
     //ViewModel
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'

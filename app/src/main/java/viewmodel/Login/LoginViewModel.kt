@@ -7,7 +7,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import data.dto.user.login.LoginRequest
 import data.dto.user.login.LoginResponse
-import data.dto.user.register.CertifiedNumberRequest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -20,8 +19,8 @@ class LoginViewModel (
     val loginResponse : LiveData<Response<LoginResponse>> = _loginResponse
 
     fun postLogin(
-        email: String,
-        password : String
+        email:String,
+        password:String
     ){
         val loginRequest = LoginRequest(email,password)
         viewModelScope.launch(Dispatchers.IO) {
