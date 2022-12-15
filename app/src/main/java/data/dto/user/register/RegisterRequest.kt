@@ -1,6 +1,7 @@
 package data.dto.user.register
 
 
+
 data class RegisterRequest(
     val email: String,
     val password: String,
