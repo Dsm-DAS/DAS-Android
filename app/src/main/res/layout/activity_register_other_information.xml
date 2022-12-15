@@ -86,18 +86,19 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="0dp"
             android:orientation="horizontal"
+            android:layout_margin="32dp"
             app:layout_constraintEnd_toEndOf="@+id/et_register_name"
             app:layout_constraintStart_toStartOf="@+id/et_register_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_register_class">
 
             <NumberPicker
                 android:id="@+id/np_grade"
-                android:layout_width="0dp"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/grade_piker"
                 app:layout_constraintStart_toStartOf="parent"
@@ -106,9 +107,9 @@
 
             <NumberPicker
                 android:id="@+id/np_class"
-                android:layout_width="0dp"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/class_piker"
                 app:layout_constraintStart_toEndOf="@+id/np_class"
@@ -116,10 +117,9 @@
 
             <NumberPicker
                 android:id="@+id/np_number"
-                style="@style/numberpicker"
-                android:layout_width="0dp"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/number_piker"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -160,7 +160,7 @@
                 android:fontFamily="@font/main_font"
                 android:paddingStart="50dp"
                 android:paddingEnd="55dp"
-                android:text="남성"
+                android:text="MALE"
                 android:textAlignment="center"
                 android:textColor="@drawable/selector_radio_text"
                 android:textFontWeight="700"
@@ -175,7 +175,7 @@
                 android:fontFamily="@font/main_font"
                 android:paddingStart="50dp"
                 android:paddingEnd="50dp"
-                android:text="여성"
+                android:text="FEMALE"
                 android:textAlignment="center"
                 android:textColor="@drawable/selector_radio_text"
                 android:textFontWeight="700"

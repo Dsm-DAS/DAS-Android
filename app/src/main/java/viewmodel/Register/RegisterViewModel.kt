@@ -1,5 +1,6 @@
 package viewmodel.Register
 
+import android.icu.number.IntegerWidth
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,12 +29,7 @@ class RegisterViewModel(
     val registerResponse: LiveData<Response<Void>> = _registerResponse
 
     companion object{
-
         var email: String? = null
-
-
-
-
     }
 
 
@@ -59,6 +55,7 @@ class RegisterViewModel(
     }
 
     fun register(
+        email: String,
         password: String,
         name: String,
         grade: Int,
@@ -66,7 +63,9 @@ class RegisterViewModel(
         number: Int,
         sex: String,
     ){
-        val registerRequest = RegisterRequest(email!!,password, name,grade,class_num,number,sex)
+        val registerRequest = RegisterRequest(email,password, name,grade,class_num,number,sex).also {
+            println(it)
+        }
         viewModelScope.launch(Dispatchers.IO) {
             _registerResponse.postValue(registerRepository.register(registerRequest))
         }

@@ -8,7 +8,6 @@ import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterPasswordBinding
 import data.api.user.register.RegisterRepository
 import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModelFactroy
 
 class RegisterpasswordActivity : BaseActivity<ActivityRegisterPasswordBinding>(
     R.layout.activity_register_password

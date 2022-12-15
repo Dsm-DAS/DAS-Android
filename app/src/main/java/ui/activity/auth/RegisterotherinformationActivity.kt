@@ -1,47 +1,130 @@
 package ui.activity.auth
 
-import android.os.Bundle
-import android.os.CountDownTimer
+import android.view.View
 import android.widget.NumberPicker
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.RadioGroup
+import androidx.core.view.get
+import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterOtherInformationBinding
+import data.api.user.register.RegisterRepository
+import kotlinx.coroutines.selects.select
+import util.startIntent
+import viewmodel.Register.RegisterViewModel
+import viewmodel.Register.RegisterViewModel.Companion.email
+import viewmodel.Register.RegisterViewModelFactory
+import java.util.EnumMap
 
+@Suppress("UNUSED_EXPRESSION")
 class RegisterotherinformationActivity : BaseActivity<ActivityRegisterOtherInformationBinding> (
     R.layout.activity_register_other_information
 ) {
 
 
+
+    private val registerRepository: RegisterRepository by lazy {
+        RegisterRepository()
+    }
+
+    private val registerViewModel: RegisterViewModel by lazy {
+        ViewModelProvider(
+            this, RegisterViewModelFactory(registerRepository)
+        )[RegisterViewModel::class.java]
+    }
+
+
     override fun initView() {
         initRegister()
         initGradePicker()
+        initClassPicker()
+        initNumberPicker()
     }
 
-    private fun initGradePicker(){
+
+
+    private fun initGradePicker() {
         val grPicker: NumberPicker = binding.npGrade
         grPicker.maxValue = 3
         grPicker.minValue = 1
         grPicker.value = 1
-        grPicker.setOnLongPressUpdateInterval(100)
-        grPicker.wrapSelectorWheel = true
-
+        grPicker.wrapSelectorWheel = false
     }
 
-    private fun initRegister(){
-        binding.btnRegisterNext.setOnClickListener{
-            val email = intent.getStringExtra("email")
+
+    private fun initClassPicker() {
+        val classPicker: NumberPicker = binding.npClass
+        classPicker.maxValue = 4
+        classPicker.minValue = 1
+        classPicker.value = 1
+        classPicker.wrapSelectorWheel = false
+    }
+
+    private fun initNumberPicker() {
+        val numberPicker: NumberPicker = binding.npNumber
+        numberPicker.maxValue = 20
+        numberPicker.minValue = 1
+        numberPicker.value = 1
+        numberPicker.wrapSelectorWheel = false
+    }
+
+
+
+    private fun initRegister() {
+        binding.btnRegisterNext.setOnClickListener {
             val password = intent.getStringExtra("password")
             val name: String = binding.etRegisterName.text.toString()
+            val grPicker: Int = binding.npGrade.value
+            val classPicker: Int = binding.npClass.value
+            val numberPicker: Int = binding.npNumber.value
+            var sex: String = ""
+
+            when(binding.rgRegisterSex.checkedRadioButtonId){
+
+                R.id.rbtn_register_man -> sex = "MALE"
+                    .also {
+                    println()
+                }
+                R.id.rbtn_register_woman -> sex = "FEMALE"
+            }
+
+            registerViewModel.register(
+                email.toString(),
+                password.toString(),
+                name,
+                grPicker,
+                classPicker,
+                numberPicker,
+                sex.toString(),
+
+            )
 
         }
     }
 
     override fun observeEvent() {
-       // TODO("Not yet implemented")
+        registerViewModel.registerResponse.observe(
+            this
+        ) {
+            when (it.code()) {
+
+                201 -> {
+                    startIntent(this, LoginActivity::class.java)
+                    finish()
+                }
+
+                400 -> showShortToast("올바른 형식을 입력하세요.")
+
+                401 -> showShortToast("인증되지 않은 이메일입니다.")
+
+                409 -> showShortToast("중복된 이메일입니다.")
+
+
+            }
+        }
     }
-
-
 }
+
+
 
 

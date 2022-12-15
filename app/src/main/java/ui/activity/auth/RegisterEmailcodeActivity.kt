@@ -7,9 +7,9 @@ import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterEmailcodeBinding
 import data.api.user.register.RegisterRepository
 import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModelFactroy
+import viewmodel.Register.RegisterViewModelFactory
 
-class RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>(
+class  RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>(
     R.layout.activity_register_emailcode
 ){
 
@@ -19,7 +19,7 @@ class RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>
 
     private val registerViewModel: RegisterViewModel by lazy {
         ViewModelProvider(
-            this, RegisterViewModelFactroy(registerRepository)
+            this, RegisterViewModelFactory(registerRepository)
         )[RegisterViewModel::class.java]
     }
 
@@ -35,9 +35,9 @@ class RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>
             val email: String = binding.etRegisterEmail.text.toString()
             if (email.isNotBlank()){
                 registerViewModel.emailcode(email)
-
+                showShortToast("잠시만 기다려주십시요..")
             }
-            binding.btnRegisterNext.isEnabled = false
+            binding.btnRegisterNext.isEnabled  = false
         }
 
     }

@@ -76,7 +76,6 @@ class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednu
         ){
             when(it.code()) {
 
-
                 200 -> {
                     RegisterViewModel.email =   intent.getStringExtra("email")
                     startIntent(this@RegisterCertifiedNumberActivity, RegisterpasswordActivity::class.java)
