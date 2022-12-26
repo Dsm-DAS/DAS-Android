@@ -16,4 +16,8 @@ class ClubDetailFragment : BaseFragment<FragmentClubDetailBinding>(R.layout.frag
 
         }
     }
+
+    fun observeEvent() {
+
+    }
 }

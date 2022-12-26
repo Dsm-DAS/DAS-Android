@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.FragmentHomeBinding
@@ -13,7 +14,10 @@ import com.example.das_android.databinding.FragmentSearchBinding
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
     fun initView() {
         binding.apply{
-
         }
+    }
+
+    fun observeEvent() {
+
     }
 }

@@ -10,6 +10,8 @@ class RecruitmentRecyclerViewModel:ViewModel() {
 
     init {
         var UserData = ArrayList<RecruitmentListResponse>()
+        UserData.add(RecruitmentListResponse("","DMS 모집합니다","프론트, 백엔드, 안드로이드, ios (D-10)"))
+        UserData.add(RecruitmentListResponse("","GRAM 프론트엔드 모집합니다","프론트엔드 (D-5)"))
         liveData.postValue(UserData)
     }
 }

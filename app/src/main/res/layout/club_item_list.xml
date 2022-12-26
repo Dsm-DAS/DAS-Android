@@ -8,10 +8,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.9"
             android:layout_height="76dp"
             android:background="@drawable/item_rounded_corner"
             android:gravity="center_vertical"
@@ -37,10 +39,11 @@
 
             <ImageView
                 android:id="@+id/club_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:src="@mipmap/ic_launcher"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/img_9"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -71,7 +74,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_width="400dp"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.9"
             android:layout_height="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +83,8 @@
             android:id="@+id/club_stack"
             android:fontFamily="@font/main_font"
             android:textColor="@color/black"
-            android:text="#자바스크립트 #스프링부트 #리액트네이티브 #안드로이드"
+            android:paddingStart="16dp"
+            android:text="#자바스크립트 #스프링부트 #안드로이드"
             android:textSize="18sp"
             tools:ignore="MissingConstraints" />
 

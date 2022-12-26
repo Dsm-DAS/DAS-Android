@@ -1,9 +1,12 @@
 package ui.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.das_android.R
@@ -26,6 +29,8 @@ class StudentRecyclerViewAdapter (var data: LiveData<ArrayList<UserListResponse>
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         data.value!!.get(position).let {
                 item -> with(holder){
+                    name.text = item.name
+                    countView.text = item.view_count.toString()
             }
         }
     }

@@ -6,6 +6,7 @@ import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterOtherInformationBinding
 import data.api.user.register.RegisterRepository
+import ui.activity.authpackage.LoginActivity
 import util.startIntent
 import viewModel.Register.RegisterViewModel
 import viewModel.Register.RegisterViewModel.Companion.email
@@ -118,7 +119,3 @@ class RegisterotherinformationActivity : BaseActivity<ActivityRegisterOtherInfor
         }
     }
 }
-
-
-
-

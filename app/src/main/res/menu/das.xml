@@ -7,7 +7,7 @@
         tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/detail"
+        android:id="@+id/write"
         android:icon="@drawable/img_detail"
         tools:ignore="MenuTitle" />
 

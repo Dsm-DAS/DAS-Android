@@ -1,4 +1,4 @@
-package ui.activity.auth
+package ui.activity.authpackage
 
 import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
@@ -6,6 +6,8 @@ import com.example.das_android.R
 import com.example.das_android.databinding.ActivityLoginBinding
 import data.api.user.login.LoginRepository
 import ui.activity.MainActivity
+import ui.activity.auth.RegisterEmailcodeActivity
+import util.startIntent
 import util.startIntentClearTop
 import viewModel.Login.LoginViewModel
 import viewModel.Login.LoginViewModelFactory
@@ -62,6 +64,12 @@ class LoginActivity :BaseActivity<ActivityLoginBinding>(
         }
     }
 }
+
+
+
+
+
+
 
 
 

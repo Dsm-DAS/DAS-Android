@@ -20,16 +20,15 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:checked="true"
-            app:itemTextColor="#FD3078"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            app:color="@drawable/color"
             android:background="#EEEEEE"
+            app:itemIconTint="@drawable/color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:menu="@menu/das"
             app:layout_constraintStart_toStartOf="parent"/>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,4 @@
 package ui.activity
-
 import androidx.fragment.app.Fragment
 import base.BaseActivity
 import com.example.das_android.R
@@ -7,9 +6,7 @@ import com.example.das_android.databinding.ActivityMainBinding
 import ui.fragment.*
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>(
-    R.layout.activity_main
-) {
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
@@ -24,7 +21,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
                 when (item.itemId) {
                     R.id.home -> replaceFragment(HomeFragment())
                     R.id.announcement -> replaceFragment(NoticeFragment())
-                    R.id.detail -> replaceFragment(ClubDetailFragment())
+                    R.id.announcement -> replaceFragment(AnnouncementFragment())
+                    R.id.write -> replaceFragment(WriteFragment())
                     R.id.search -> replaceFragment(SearchFragment())
                     R.id.menu -> replaceFragment(MenuFragment())
                 }

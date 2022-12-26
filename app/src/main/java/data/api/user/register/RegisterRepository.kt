@@ -16,6 +16,4 @@ class RegisterRepository {
 
     suspend fun register(registerRequest: RegisterRequest) : Response<Void> =
         registerApiProvider.register(registerRequest)
-
-
 }
