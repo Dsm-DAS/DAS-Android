@@ -1,15 +1,11 @@
 package ui.activity.auth
 
 import android.content.Intent
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterPasswordBinding
-import data.api.user.register.RegisterRepository
-import viewmodel.Register.RegisterViewModel
 
-class RegisterpasswordActivity : BaseActivity<ActivityRegisterPasswordBinding>(
+class RegisterPasswordActivity : BaseActivity<ActivityRegisterPasswordBinding>(
     R.layout.activity_register_password
 ) {
 

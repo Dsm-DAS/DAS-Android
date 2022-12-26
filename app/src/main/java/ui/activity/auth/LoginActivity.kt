@@ -7,8 +7,8 @@ import com.example.das_android.databinding.ActivityLoginBinding
 import data.api.user.login.LoginRepository
 import ui.activity.MainActivity
 import util.startIntentClearTop
-import viewmodel.Login.LoginViewModel
-import viewmodel.Login.LoginViewModelFactory
+import viewModel.Login.LoginViewModel
+import viewModel.Login.LoginViewModelFactory
 
 class LoginActivity :BaseActivity<ActivityLoginBinding>(
     R.layout.activity_login

@@ -6,8 +6,8 @@ import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterEmailcodeBinding
 import data.api.user.register.RegisterRepository
-import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModelFactory
+import viewModel.Register.RegisterViewModel
+import viewModel.Register.RegisterViewModelFactory
 
 class  RegisterEmailcodeActivity : BaseActivity<ActivityRegisterEmailcodeBinding>(
     R.layout.activity_register_emailcode

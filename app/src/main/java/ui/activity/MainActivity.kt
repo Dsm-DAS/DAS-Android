@@ -1,6 +1,5 @@
 package ui.activity
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import base.BaseActivity
 import com.example.das_android.R
@@ -24,7 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             setOnItemSelectedListener { item ->
                 when (item.itemId) {
                     R.id.home -> replaceFragment(HomeFragment())
-                    R.id.announcement -> replaceFragment(AnnouncementFragment())
+                    R.id.announcement -> replaceFragment(NoticeFragment())
                     R.id.detail -> replaceFragment(ClubDetailFragment())
                     R.id.search -> replaceFragment(SearchFragment())
                     R.id.menu -> replaceFragment(MenuFragment())

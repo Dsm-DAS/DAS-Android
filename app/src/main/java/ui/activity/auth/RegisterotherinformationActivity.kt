@@ -1,22 +1,16 @@
 package ui.activity.auth
 
-import android.view.View
 import android.widget.NumberPicker
-import android.widget.RadioGroup
-import androidx.core.view.get
 import androidx.lifecycle.ViewModelProvider
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterOtherInformationBinding
 import data.api.user.register.RegisterRepository
-import kotlinx.coroutines.selects.select
 import util.startIntent
-import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModel.Companion.email
-import viewmodel.Register.RegisterViewModelFactory
-import java.util.EnumMap
+import viewModel.Register.RegisterViewModel
+import viewModel.Register.RegisterViewModel.Companion.email
+import viewModel.Register.RegisterViewModelFactory
 
-@Suppress("UNUSED_EXPRESSION")
 class RegisterotherinformationActivity : BaseActivity<ActivityRegisterOtherInformationBinding> (
     R.layout.activity_register_other_information
 ) {

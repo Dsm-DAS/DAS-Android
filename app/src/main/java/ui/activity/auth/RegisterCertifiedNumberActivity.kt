@@ -7,8 +7,8 @@ import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRegisterCertifiednumberBinding
 import data.api.user.register.RegisterRepository
 import util.startIntent
-import viewmodel.Register.RegisterViewModel
-import viewmodel.Register.RegisterViewModelFactory
+import viewModel.Register.RegisterViewModel
+import viewModel.Register.RegisterViewModelFactory
 
 class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednumberBinding>(
     R.layout.activity_register_certifiednumber
@@ -78,7 +78,7 @@ class RegisterCertifiedNumberActivity : BaseActivity<ActivityRegisterCertifiednu
 
                 200 -> {
                     RegisterViewModel.email =   intent.getStringExtra("email")
-                    startIntent(this@RegisterCertifiedNumberActivity, RegisterpasswordActivity::class.java)
+                    startIntent(this@RegisterCertifiedNumberActivity, RegisterPasswordActivity::class.java)
                     finish()
                 }
                 400 -> showShortToast("요청 형식을 식별할 수 없습니다.")
