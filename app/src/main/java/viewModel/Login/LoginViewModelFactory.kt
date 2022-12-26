@@ -1,4 +1,4 @@
-package viewmodel.Login
+package viewModel.Login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

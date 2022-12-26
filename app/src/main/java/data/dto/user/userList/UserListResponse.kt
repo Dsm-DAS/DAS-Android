@@ -7,7 +7,7 @@ data class UserListResponse (
     val user_id : Int,
     val name : String,
     val profile_image_url : String,
-    val viwe_count : Int,
+    val view_count : Int,
     val grade : String,
     val class_num : String,
     val introduce : String,

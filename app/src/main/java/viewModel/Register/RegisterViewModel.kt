@@ -1,6 +1,5 @@
-package viewmodel.Register
+package viewModel.Register
 
-import android.icu.number.IntegerWidth
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

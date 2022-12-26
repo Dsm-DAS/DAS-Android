@@ -1,4 +1,4 @@
-package viewmodel.Register
+package viewModel.Register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

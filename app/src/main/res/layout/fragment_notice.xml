@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ui.fragment.NoticeFragment">
+
+    <data>
+        <variable
+            name="model"
+            type="viewModel.notice.NoticeViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_notice_logo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/img_notice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="127dp"
+            android:layout_height="25dp"
+            android:text="알림이 없습니다"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textFontWeight="700"
+            android:fontFamily="@font/main_font"
+            android:textColor="#E6E6E6"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_notice_logo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_noticeList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

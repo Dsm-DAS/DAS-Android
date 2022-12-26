@@ -1,4 +1,4 @@
-package viewmodel.RecyclerView
+package viewModel.RecyclerView
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package viewmodel.Login
+package viewModel.Login
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
