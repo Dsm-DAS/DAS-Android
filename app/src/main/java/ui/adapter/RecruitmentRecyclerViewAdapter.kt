@@ -8,9 +8,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.das_android.R
 import data.dto.feed.RecruitmentListResponse
-import data.dto.user.userList.UserListResponse
 
-class RecruitmentRecyclerViewAdapter(var data: MutableLiveData<ArrayList<RecruitmentListResponse>>) :
+class RecruitmentRecyclerViewAdapter(var data: ArrayList<RecruitmentListResponse>) :
     RecyclerView.Adapter<RecruitmentRecyclerViewAdapter.MyViewHolder>(){
     inner class MyViewHolder constructor(parent : ViewGroup):RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.recruitment_item_list,parent,false)
@@ -25,16 +24,12 @@ class RecruitmentRecyclerViewAdapter(var data: MutableLiveData<ArrayList<Recruit
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        data.value!!.get(position).let {
-                item -> with(holder){
-                    name.text = item.name
-                    content.text = item.content
-            }
-        }
+        holder.name.text = data.get(position).name
+        holder.content.text = data.get(position).content
     }
 
     override fun getItemCount(): Int {
-        return data.value!!.size
+        return data.size
     }
 
 }

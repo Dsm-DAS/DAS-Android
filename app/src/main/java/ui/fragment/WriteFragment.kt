@@ -1,5 +1,6 @@
 package ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import base.BaseFragment
@@ -14,11 +15,9 @@ class WriteFragment : BaseFragment<FragmentWriteBinding>(R.layout.fragment_write
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-
-
-
     }
-    fun initView() {
+    @SuppressLint("ResourceType")
+    private fun initView() {
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
             }
@@ -33,14 +32,14 @@ class WriteFragment : BaseFragment<FragmentWriteBinding>(R.layout.fragment_write
         })
 
         // 뷰페이저에 어댑터 연결
-        binding.pager.adapter = TabLayoutAdapter(this)
+        binding.pager.adapter = TabLayoutAdapter(activity)
         /* 탭과 뷰페이저를 연결, 여기서 새로운 탭을 다시 만드므로 레이아웃에서 꾸미지말고
         여기서 꾸며야함
          */
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             when (position) {
-                0 -> tab.text = "동아리"
-                1 -> tab.text = "모집 공고"
+                0 -> tab.text = "모집 공고"
+                1 -> tab.text = "동아리"
                 2 -> tab.text = "학생"
             }
         }.attach()

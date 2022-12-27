@@ -1,21 +1,25 @@
 package ui.adapter
 
+import android.app.Application
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.MutableLiveData
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.das_android.R
 import data.dto.club.ClubListResponse
-import data.dto.user.userList.UserListResponse
+import ui.activity.auth.DetailActivity
+import ui.fragment.ClubDetailFragment
+import util.startIntent
+import util.startIntentClearTop
 
-class ClubRecyclerViewAdapter(var data: MutableLiveData<ArrayList<ClubListResponse>>) :
+class ClubRecyclerViewAdapter(var data: ArrayList<ClubListResponse>, val mContext: Application) :
     RecyclerView.Adapter<ClubRecyclerViewAdapter.MyViewHolder>(){
     inner class MyViewHolder constructor(parent : ViewGroup):RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.club_item_list,parent,false)
     ){
-        var clubImage = itemView.findViewById<ImageView>(R.id.club_profile)
         var clubName = itemView.findViewById<TextView>(R.id.club_name)
         var countView = itemView.findViewById<TextView>(R.id.club_count_view)
         var clubStack = itemView.findViewById<TextView>(R.id.club_stack)
@@ -26,17 +30,18 @@ class ClubRecyclerViewAdapter(var data: MutableLiveData<ArrayList<ClubListRespon
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        data.value!!.get(position).let {
-                item -> with(holder){
-                    clubName.text = item.club_name
-                    countView.text = item.like_count.toString()
-                    clubStack.text = item.Club_category
-            }
+
+        holder.clubName.text = data.get(position).club_name
+        holder.countView.text = data.get(position).like_count.toString()
+        holder.clubStack.text = data.get(position).Club_category
+
+        holder.itemView.setOnClickListener {
+            startIntentClearTop(mContext,DetailActivity::class.java)
         }
     }
 
     override fun getItemCount(): Int {
-        return data.value!!.size
+        return data.size
     }
 
 }

@@ -42,7 +42,7 @@ class LoginActivity :BaseActivity<ActivityLoginBinding>(
 
     private fun initGoRegister() {
         binding.signupButton.setOnClickListener {
-            startIntentClearTop(this, RegisterEmailcodeActivity::class.java)
+            startIntent(this,RegisterEmailcodeActivity::class.java)
         }
     }
 
@@ -53,7 +53,7 @@ class LoginActivity :BaseActivity<ActivityLoginBinding>(
             when (it.code()) {
                 200 -> {
                     showShortToast("로그인이 되었습니다.")
-                    startIntentClearTop(this, MainActivity::class.java)
+                    startIntentClearTop(this,MainActivity::class.java)
                 }
                 400 -> showShortToast("요청 형식을 식별할 수 없습니다.")
 

@@ -5,22 +5,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="179dp"
-        android:layout_height="60dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp">
 
         <ImageView
-            android:id="@+id/student_name"
+            android:id="@+id/user_profile"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img_das_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/student_count_view"
+            android:id="@+id/student_name"
             android:layout_width="70dp"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
@@ -30,11 +29,11 @@
             android:textColor="@color/black"
             android:textFontWeight="700"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/student_name"
+            app:layout_constraintStart_toEndOf="@+id/user_profile"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/user_profile"
+            android:id="@+id/count"
             android:layout_width="50dp"
             android:layout_height="20dp"
             android:text="38 조회"
@@ -42,8 +41,8 @@
             android:textSize="15sp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintStart_toEndOf="@+id/student_name"
-            app:layout_constraintTop_toBottomOf="@+id/student_count_view" />
+            app:layout_constraintStart_toEndOf="@+id/user_profile"
+            app:layout_constraintTop_toBottomOf="@+id/student_name" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
