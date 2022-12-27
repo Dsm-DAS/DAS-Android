@@ -1,10 +1,9 @@
 package viewModel.RecyclerView
-
+/*
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-<<<<<<< Updated upstream
 class StudentRecyclerViewModel:ViewModel()
-/*
+
     var liveData : MutableLiveData<ArrayList<UserListResponse>> = MutableLiveData<ArrayList<UserListResponse>>()
 
     init {
@@ -20,11 +19,9 @@ class StudentRecyclerViewModel:ViewModel()
         liveData.postValue(UserData)
     }
 }
-
- */
-=======
 import data.dto.user.userList.UserListResponse
 class StudentRecyclerViewModel:ViewModel() {
 
 }
->>>>>>> Stashed changes
+
+ */

@@ -1,21 +1,22 @@
 package ui.activity
 
-import android.os.Bundle
-import android.view.View
 import base.BaseActivity
-import base.BaseFragment
 import com.example.das_android.R
-import com.example.das_android.databinding.FragmentMenuProfileBinding
+import com.example.das_android.databinding.ActivityMenuProfileBinding
+import util.startIntent
+import util.startIntentClearTop
 
-class MenuProfileActivity:BaseActivity<FragmentMenuProfileBinding>(R.layout.fragment_menu_profile) {
+class MenuProfileActivity: BaseActivity<ActivityMenuProfileBinding>(R.layout.activity_menu_profile) {
 
 
 
     override fun initView() {
-
+        binding.imageView6.setOnClickListener {
+            startIntentClearTop(this,MainActivity::class.java)
+        }
     }
 
     override fun observeEvent() {
-        //TODO("Not yet implemented")
+
     }
 }

@@ -27,7 +27,7 @@
             android:layout_width="214dp"
             app:layout_constraintHeight_percent="0.1"
             android:layout_marginStart="16dp"
-            android:background="@drawable/img_1"
+            android:background="@drawable/img_asdfasdf"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             tools:ignore="ContentDescription"  android:layout_height="0dp"/>

@@ -28,8 +28,9 @@
             android:layout_height="32dp"
             android:layout_marginStart="9dp"
             android:layout_marginTop="9dp"
-            android:background="@drawable/img"
+            android:background="@drawable/img_announcement"
             app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -57,13 +58,5 @@
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/img_notice_background"
             app:layout_constraintTop_toBottomOf="@+id/tv_notice_title" />
-
-        <ImageView
-            android:layout_width="358dp"
-            android:layout_height="0dp"
-            android:background="@drawable/img_1"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_notice_created_at" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

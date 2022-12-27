@@ -44,8 +44,9 @@
             android:layout_height="40dp"
             android:layout_marginStart="84dp"
             android:layout_marginTop="20dp"
-            android:text="멋진로고동아리"
+            android:text="코도모"
             android:textSize="28dp"
+            android:gravity="center"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             android:textColor="@color/black"
@@ -65,7 +66,7 @@
             android:id="@+id/club_specialism"
             android:layout_width="244dp"
             android:layout_height="48dp"
-            android:text="#안드로이드 #최악의 분야 #간지"
+            android:text="#안드로이드 #iOS #백엔드"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +78,7 @@
             android:layout_width="260dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="안드로이드 하지말고 프론트하세요 프론트가 더 좋아요 안드로이드는 사람이 할게 아니에요"
+            android:text="안드로이드와 프론트엔드 iOS,백엔드를 공부하는 전공 동아리 입니다."
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -111,12 +112,11 @@
             app:layout_constraintTop_toBottomOf="@+id/view"
             tools:ignore="MissingConstraints" />
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@drawable/img_300"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="400dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"></ImageView>
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

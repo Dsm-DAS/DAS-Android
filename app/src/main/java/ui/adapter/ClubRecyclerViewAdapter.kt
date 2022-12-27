@@ -15,14 +15,13 @@ import ui.fragment.ClubDetailFragment
 import util.startIntent
 import util.startIntentClearTop
 
-class ClubRecyclerViewAdapter(var data: ArrayList<ClubListResponse>, val mContext: Application) :
+class ClubRecyclerViewAdapter(var data: ArrayList<ClubListResponse>, val mContext1: Application) :
     RecyclerView.Adapter<ClubRecyclerViewAdapter.MyViewHolder>(){
     inner class MyViewHolder constructor(parent : ViewGroup):RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.club_item_list,parent,false)
     ){
         var clubName = itemView.findViewById<TextView>(R.id.club_name)
         var countView = itemView.findViewById<TextView>(R.id.club_count_view)
-        var vountView = itemView.findViewById<TextView>(R.id.club_count_view)
         var clubStack = itemView.findViewById<TextView>(R.id.club_stack)
 
     }
@@ -38,7 +37,7 @@ class ClubRecyclerViewAdapter(var data: ArrayList<ClubListResponse>, val mContex
         holder.clubStack.text = data.get(position).Club_category
 
         holder.itemView.setOnClickListener {
-            startIntentClearTop(mContext,DetailActivity::class.java)
+            startIntentClearTop(mContext1,DetailActivity::class.java)
         }
     }
 
