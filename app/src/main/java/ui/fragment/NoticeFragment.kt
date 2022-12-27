@@ -1,22 +1,13 @@
 package ui.fragment
 
-import android.os.Bundle
-import android.view.View
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.FragmentNoticeBinding
-import data.api.notice.NoticeRepository
-import data.dto.notice.NoticeList
-import ui.adapter.NoticeRecyclerviewAdapter
-import viewModel.notice.NoticeViewModel
-import viewModel.notice.NoticeViewModelFactory
 
 
-class NoticeFragment : BaseFragment<FragmentNoticeBinding>(R.layout.fragment_notice) {
+class NoticeFragment : BaseFragment<FragmentNoticeBinding>(R.layout.list_notice) {
 
+    /*
     private val noticeRepository: NoticeRepository by lazy {
         NoticeRepository()
     }
@@ -96,5 +87,8 @@ class NoticeFragment : BaseFragment<FragmentNoticeBinding>(R.layout.fragment_not
                 }
             }
         }
-    }
+
+   }
+
+     */
 }

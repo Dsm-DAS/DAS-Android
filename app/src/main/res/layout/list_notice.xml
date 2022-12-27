@@ -10,10 +10,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="358dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="25dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
 
         <ImageView
             android:id="@+id/img_notice_background"
@@ -52,7 +51,7 @@
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/main_font"
-            android:text="2022-12-18"
+            android:text="12/17 17:34 오후"
             android:textColor="#808080"
             android:textFontWeight="500"
             android:textSize="18sp"

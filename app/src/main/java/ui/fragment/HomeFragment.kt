@@ -1,10 +1,25 @@
 package ui.fragment
 
+import android.os.Bundle
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.FragmentHomeBinding
+import ui.adapter.HomeStudentRecyclerViewAdapter
+import java.nio.file.Files.find
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home)
+
+class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+
+
+
+}
+
+
+
+
+
 //
 //    var data = MutableLiveData<ArrayList<UserListResponse>>()
 //    lateinit var adapter: StudentRecyclerViewAdapter
@@ -50,3 +65,4 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home)
 //        viewModel.liveData.observe(this,dataObserver)
 //    }
 //}
+

@@ -10,18 +10,20 @@ import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.FragmentHomeBinding
 import com.example.das_android.databinding.FragmentMenuBinding
+import ui.activity.MenuProfileActivity
+import util.startIntent
+import util.startIntentClearTop
 
 class MenuFragment : BaseFragment<FragmentMenuBinding>(R.layout.fragment_menu) {
-     fun initView() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-         binding.btnNextProfile.setOnClickListener{
+        val intent = Intent(requireActivity(),MenuProfileActivity::class.java)
 
-             activity?.let {
-                 val intent = Intent(it,MenuProfileFragment::class.java)
-                 it.startActivity(intent)
-             }
-         }
+        binding.btnNextProfile.setOnClickListener{
+            startActivity(intent)
+        }
+
 
     }
-
 }

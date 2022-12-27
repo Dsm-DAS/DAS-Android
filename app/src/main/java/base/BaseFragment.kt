@@ -8,8 +8,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import android.widget.Toast
-
+import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseFragment<B : ViewDataBinding>(
     @LayoutRes private val layoutId: Int

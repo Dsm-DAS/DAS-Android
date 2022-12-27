@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,10 +32,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:fontFamily="@font/main_font"
                 android:text="동아리 이름"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                android:fontFamily="@font/main_font"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ViewPager2_home_ViewPager"
@@ -44,92 +44,95 @@
                 tools:layout_editor_absoluteY="152dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
-            android:text="동아리"
-            android:textColor="@color/black"
-            android:id="@+id/club"
-            android:textSize="24sp"
-            android:fontFamily="@font/main_font"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout"
-            tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_height="wrap_content"
-            android:text="모두 보기"
-            android:textSize="16sp"
-            android:id="@+id/club_view_all"
-            app:layout_constraintLeft_toRightOf="@+id/club"
-            app:layout_constraintTop_toBottomOf="@+id/layout"
-            android:layout_marginTop="28dp"
-            android:fontFamily="@font/main_font"
-            android:textColor="@color/main_btn_color"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/main_font"
+                android:text="동아리"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout"
+                tools:ignore="MissingConstraints" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/recyclerView_home_club1"
-            android:layout_height="100dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toBottomOf="@+id/club"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/club_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/main_font"
+                android:text="모두 보기"
+                android:textColor="@color/main_btn_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/club"
+                app:layout_constraintTop_toBottomOf="@+id/layout"
+                tools:ignore="MissingConstraints" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/recyclerView_home_club2"
-            android:layout_height="100dp"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club1"
-            android:layout_marginTop="28dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_home_club1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/club"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
-            android:text="학생"
-            android:textColor="@color/black"
-            android:id="@+id/student"
-            android:textSize="24sp"
-            android:fontFamily="@font/main_font"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
-            tools:ignore="MissingConstraints" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_home_club2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club1"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_height="wrap_content"
-            android:text="모두 보기"
-            android:textSize="16sp"
-            android:id="@+id/student_view_all"
-            app:layout_constraintLeft_toRightOf="@+id/student"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/main_font"
-            android:textColor="@color/main_btn_color"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/main_font"
+                android:text="학생"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
+                tools:ignore="MissingConstraints" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_home_student"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/student_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/main_font"
+                android:text="모두 보기"
+                android:textColor="@color/main_btn_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/student"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/recyclerView_home_student"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:src="@drawable/img_26"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_home_club2"
+                tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

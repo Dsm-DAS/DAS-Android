@@ -22,7 +22,9 @@ class ClubRecyclerViewAdapter(var data: ArrayList<ClubListResponse>, val mContex
     ){
         var clubName = itemView.findViewById<TextView>(R.id.club_name)
         var countView = itemView.findViewById<TextView>(R.id.club_count_view)
+        var vountView = itemView.findViewById<TextView>(R.id.club_count_view)
         var clubStack = itemView.findViewById<TextView>(R.id.club_stack)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

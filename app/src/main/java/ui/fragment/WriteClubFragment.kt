@@ -2,6 +2,13 @@ package ui.fragment
 
 import android.os.Bundle
 import android.view.View
+<<<<<<< Updated upstream
+=======
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+>>>>>>> Stashed changes
 import androidx.recyclerview.widget.LinearLayoutManager
 import base.BaseFragment
 import com.example.das_android.R
@@ -28,8 +35,23 @@ class WriteClubFragment : BaseFragment<FragmentWriteClubBinding>(R.layout.fragme
         initView()
     }
     fun initView() {
+<<<<<<< Updated upstream
         binding.rvClub.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
         binding.rvClub.setHasFixedSize(true)
         binding.rvClub.adapter = ClubRecyclerViewAdapter(data,requireActivity().application)
+=======
+        binding = activity?.let { DataBindingUtil.setContentView(it,R.layout.fragment_write_club) }!!
+        viewModel = ViewModelProvider(this)[ClubRecyclerViewModel::class.java]
+
+        binding.rvClub.layoutManager = LinearLayoutManager(activity)
+
+        val dataObserver : Observer<ArrayList<ClubListResponse>> =
+            Observer { livedata ->
+                data.value = livedata
+                val newAdapter = ClubRecyclerViewAdapter(data)
+                binding.rvClub.adapter= newAdapter
+            }
+        activity?.let { viewModel.liveData.observe(it,dataObserver) }
+>>>>>>> Stashed changes
     }
 }

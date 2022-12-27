@@ -16,6 +16,7 @@
         android:theme="@style/Theme.Das_Android"
         android:usesCleartextTraffic="true"
         tools:targetApi="s">
+<<<<<<< Updated upstream
         <activity
             android:name="ui.activity.auth.DetailActivity"
             android:exported="false">
@@ -29,6 +30,13 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+=======
+
+
+
+        <activity android:name="ui.activity.auth.RegisterEmailcodeActivity"
+               android:exported="true">
+>>>>>>> Stashed changes
         </activity>
         <activity
             android:name="ui.activity.auth.RegisterEmailcodeActivity"
@@ -56,6 +64,21 @@
             android:name="ui.activity.auth.RegisterotherinformationActivity"
             android:exported="true" />
 
+<<<<<<< Updated upstream
+=======
+        </activity>
+        <activity android:name="ui.activity.auth.RegisterotherinformationActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name="ui.activity.MainActivity"
+                    android:exported="true">
+        </activity>
+        <activity android:name="ui.activity.MenuProfileActivity"
+            android:exported="true">
+
+        </activity>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
