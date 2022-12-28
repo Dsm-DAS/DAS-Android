@@ -1,7 +1,5 @@
 package ui.activity.auth
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import base.BaseActivity
 import com.example.das_android.R
 import com.example.das_android.databinding.ActivityRecruitmentDetailBinding

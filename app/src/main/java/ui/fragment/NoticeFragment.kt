@@ -1,11 +1,19 @@
 package ui.fragment
 
+import android.os.Bundle
+import android.view.View
 import base.BaseFragment
 import com.example.das_android.R
 import com.example.das_android.databinding.FragmentNoticeBinding
+import com.example.das_android.databinding.ListNoticeBinding
 
 
-class NoticeFragment : BaseFragment<FragmentNoticeBinding>(R.layout.list_notice) {
+class NoticeFragment : BaseFragment<ListNoticeBinding>(R.layout.list_notice) {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
 
     /*
     private val noticeRepository: NoticeRepository by lazy {

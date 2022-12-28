@@ -3,9 +3,7 @@ package ui.adapter
 import android.app.Application
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.das_android.R
 import data.dto.feed.RecruitmentListResponse

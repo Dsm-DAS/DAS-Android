@@ -14,7 +14,7 @@ import ui.activity.auth.DetailActivity
 import util.startIntent
 import util.startIntentClearTop
 
-class StudentRecyclerViewAdapter2 (var data: ArrayList<UserListData>) :
+class StudentRecyclerViewAdapter2 (var data: ArrayList<UserListData>, var mContext: Application) :
     RecyclerView.Adapter<StudentRecyclerViewAdapter2.MyViewHolder>(){
     inner class MyViewHolder constructor(parent : ViewGroup):RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.student_item_list,parent,false)
@@ -29,7 +29,11 @@ class StudentRecyclerViewAdapter2 (var data: ArrayList<UserListData>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.name.text = data.get(position).name
-        holder.countView.text = data.get(position).view_count.toString()
+        holder.countView.text = data.get(position).view_count
+
+        holder.itemView.setOnClickListener {
+            startIntentClearTop(mContext, MenuProfileActivity::class.java)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -14,13 +14,13 @@ import viewModel.RecyclerView.ClubRecyclerViewModel
 
 class FragmentWrite_Student : BaseFragment<FragmentWriteStudentBinding>(R.layout.fragment_write__student) {
     var data = arrayListOf<UserListData>(
-        UserListData("김은오","",20),
-        UserListData("김연우","",10),
-        UserListData("정지관","",20),
-        UserListData("박도연","",30),
-        UserListData("양운석","",9)
+        UserListData("김은오",R.drawable.img_das_logo, "18 조회"),
+        UserListData("김연우",R.drawable.img_das_logo, "11 조회"),
+        UserListData("양운석",R.drawable.img_das_logo, "9 조회"),
+        UserListData("정지관",R.drawable.img_das_logo, "30 조회"),
 
-    )
+
+        )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

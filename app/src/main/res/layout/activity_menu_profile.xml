@@ -77,47 +77,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <ImageView
-        android:id="@+id/btn_next"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/img_15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/img_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/img_16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_next" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/main_font"
-        android:text="yeon0821"
-        android:textFontWeight="500"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/main_font"
+            android:text="yeon0821"
+            android:textFontWeight="500"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/img_17"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/img_17"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <TextView
         android:id="@+id/textView12"
@@ -131,15 +121,14 @@
         app:layout_constraintStart_toStartOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/img_18"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/img_18"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,14 +141,14 @@
         app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="365dp"
-        android:layout_height="110dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/img_19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="365dp"
+            android:layout_height="110dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/img_19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -170,7 +159,7 @@
         android:textFontWeight="500"
         android:fontFamily="@font/main_font"
         android:textColor="@color/black"
-        android:text="안녕하세요 대덕소프트웨어마이스터고에서 \n안드로이드를 전공하고있는 깁연우입니다."
+        android:text="안녕하세요 대덕소프트웨어마이스터고에서 \n안드로이드를 전공하고있는 김연우입니다."
         app:layout_constraintStart_toStartOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="@+id/imageView12" />
 

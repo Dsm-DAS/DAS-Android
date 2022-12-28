@@ -1,17 +1,13 @@
 package ui.adapter
 
 import android.app.Application
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.das_android.R
 import data.dto.user.userList.UserListData
 import ui.activity.MenuProfileActivity
-import ui.activity.auth.DetailActivity
-import util.startIntent
 import util.startIntentClearTop
 
 class StudentRecyclerViewAdapter (var data: ArrayList<UserListData>, val mContext2: Application) :

@@ -6,39 +6,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="40dp"
-            android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.05"
-            android:text="필터"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018"
-            tools:ignore="MissingConstraints" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="214dp"
-            app:layout_constraintHeight_percent="0.1"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/img_asdfasdf"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            tools:ignore="ContentDescription"  android:layout_height="0dp"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recruitment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.83"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.83"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

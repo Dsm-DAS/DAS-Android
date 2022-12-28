@@ -16,8 +16,7 @@ class WriteRecruitmentFragment : BaseFragment<FragmentWriteRecruitmentBinding>(R
 
         RecruitmentListResponse("","동아리원 모집합니다.","코도모 전공동아리 모집합니다.")
     )
-    lateinit var adapter: RecruitmentRecyclerViewAdapter
-    lateinit var viewModel: RecruitmentRecyclerViewModel
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -59,6 +59,8 @@
             android:exported="true" />
         <activity android:name="ui.activity.MenuProfileActivity"
             android:exported="true"/>
+        <activity android:name="ui.activity.ChangePasswordActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

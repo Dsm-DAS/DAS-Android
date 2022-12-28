@@ -34,4 +34,5 @@ abstract class BaseFragment<B : ViewDataBinding>(
         binding.lifecycleOwner = this
     }
 
+
 }

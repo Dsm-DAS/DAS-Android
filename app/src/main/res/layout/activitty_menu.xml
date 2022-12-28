@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -102,24 +103,83 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="380dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/img_300"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-        <ImageView
             android:id="@+id/imageView4"
             android:layout_width="380dp"
             android:layout_height="40dp"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
             android:background="@drawable/img_7"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/constraintLayout2"
+            android:layout_width="380dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:backgroundTint="#F5F5F5"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/img_37"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text="로그아웃"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="44dp"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                app:layout_constraintStart_toEndOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/img_28"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/img_38"/>
+
+            <TextView
+                android:id="@+id/tv_changePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 변경"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:fontFamily="@font/main_font"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="70dp"/>
+
+            
+
+        </androidx.cardview.widget.CardView>
+
 
         <ImageView
             android:id="@+id/imageView5"
@@ -129,7 +189,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/img_8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 
         <ImageView

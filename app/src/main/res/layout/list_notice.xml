@@ -10,14 +10,16 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noticeList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="30dp">
+        android:layout_margin="35dp">
 
-        <ImageView
+        <TextView
             android:id="@+id/img_notice_background"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:textColor="@drawable/notice_click"
             android:background="@drawable/img_notice_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +44,7 @@
             android:text="전공동아리 관련 공지"
             android:textColor="@color/black"
             android:textFontWeight="700"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/img_notice_background"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,5 +60,15 @@
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/img_notice_background"
             app:layout_constraintTop_toBottomOf="@+id/tv_notice_title" />
+
+        <ImageView
+            android:layout_width="358dp"
+            android:layout_height="10dp"
+            android:src="@drawable/img_28"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notice_created_at" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
